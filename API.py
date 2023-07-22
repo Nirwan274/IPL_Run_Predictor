@@ -10,8 +10,6 @@ api = Api(API)
 
 with open('IPL_Joblib', 'rb') as ipl:
     model = joblib.load(ipl)
-
-# Load the original dataset used for training
 data = pd.read_csv("IPL.csv", low_memory=False)
 columns_to_drop = ['match_id', 'season', 'start_date', 'venue', 'innings', 'batting_team', 'bowling_team',
                    'non_striker', 'other_wicket_type', 'player_dismissed', 'penalty', 'other_player_dismissed',
@@ -23,7 +21,7 @@ data.drop(columns=['runs_off_bat'], inplace=True)
 data = pd.get_dummies(data, columns=['striker', 'bowler', 'wicket_type'])
 data = data.iloc[1:]
 X = data.drop(columns=['previous_runs'])
-X.columns = X.columns.astype(str)  # Convert column names to strings
+X.columns = X.columns.astype(str)
 
 
 def runs(X, striker_name, bowler_name, ball):

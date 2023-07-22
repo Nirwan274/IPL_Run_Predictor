@@ -1,0 +1,23 @@
+<div class="banner">
+  <div class="content">
+      <h1 class="mb-5">Wicket incoming?<br/> Lets see</h1>
+      <a >Predict Now <i class="bi bi-arrow-right"></i></a>
+  </div>
+</div>
+<br><br>
+
+<h2>Lets get the Ball Rolling</h2>
+<form class="inline-form" (ngSubmit)="Prediction()" #predictionForm="ngForm">
+    <input type="text" class="form-control" placeholder="Enter Striker Name" id="sname" name="sname" [(ngModel)]="strikerName" required/>
+    <input type="text" class="form-control" placeholder="Enter Bowler Name" id="bname" name="bname" [(ngModel)]="bowlerName" required/>
+    <input type="text" class="form-control" placeholder="Enter Over and next ball" id="oname" name="oname" [(ngModel)]="ball" required/>
+</form>
+<div class="d-grid gap-2 col-6 mx-auto mt-3 ">
+    <button type="button" class="btn btn-outline-primary" [disabled]="!predictionForm.valid" (click)="Prediction()">Predict</button>
+</div>
+<div class="predicted-runs-section" *ngIf="predictedRuns !== null">
+  <p>Predicted Runs: {{ predictedRuns }}</p>
+</div>
+<div class="error-message" *ngIf="errorMessage !== null">
+  {{ errorMessage }}
+</div>

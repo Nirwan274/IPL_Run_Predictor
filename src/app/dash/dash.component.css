@@ -1,0 +1,138 @@
+.banner
+{
+    background-image: url('src/assets/img/aksh-yadav-bY4cqxp7vos-unsplash.jpg');
+    height: 600px;
+    background-position: center;
+    background-size: cover;
+}
+.content
+{
+    top: 30%;
+    left: 20%;
+    position: absolute;
+}
+.content h1
+{
+    color: #fff;
+    font-size: 60px;
+    font-weight: bold;
+
+}
+.content a
+{
+    text-decoration: none;
+    background-color: #fff;
+    color: var(--primary-color);
+    padding: 15px 20px;
+    border-radius: 5px;
+}
+
+.content a:hover
+{
+    background-color: var(--primary-color);
+    color: #fff;
+}
+.highlight
+{
+    color: var(--primary-color);
+    font-weight: bold;
+    font-style: italic;
+    text-decoration: underline;
+}
+
+.viewmorebtn
+{
+    text-decoration: none;
+    background-color:var(--primary-color);
+    color: #000;
+    padding: 10px 10px;
+    border-radius: 5px;
+    font-size: 18px;
+
+}
+
+@media screen and (max-width:200px)
+{
+    .banner
+{
+    height: 300px;
+}
+}
+
+body {
+  margin-top: 50px;
+  font-family: sans-serif;
+  font-style: italic;
+  padding: 20px;
+}
+
+.inline-form {
+  display: flex;
+  align-items: center;
+}
+
+.inline-form label {
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+.inline-form input,
+.inline-form textarea {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.inline-form input:focus,
+.inline-form textarea:focus {
+  outline: none;
+  border-color: #6b93d6;
+}
+
+.inline-form button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  background-color: rgb(43, 87, 170);
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.inline-form button:hover {
+  background-color: rgb(43, 87, 170);
+}
+
+h2 {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  font-style: italic;
+  color: #333;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 5px;
+}
+.predicted-runs-section {
+  margin-top: 20px;
+  padding: 10px;
+  border: 2px solid rgb(43, 87, 170);
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: rgb(43, 87, 170);
+}
+
+.predicted-runs-section p {
+  margin: 0;
+}
+.form-predicted-runs-wrapper {
+  margin-top: 30px;
+}
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+}
